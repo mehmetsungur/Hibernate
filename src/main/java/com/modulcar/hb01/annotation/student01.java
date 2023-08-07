@@ -1,9 +1,6 @@
 package com.modulcar.hb01.annotation;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name="t_student01")
@@ -16,6 +13,20 @@ public class student01 {
     @Column(name = "std_name",length = 100,nullable = false,unique = true)
     private String name;
     private int grade;
+
+    @Transient // bu fieldda karşılık age isminde bir sütun oluşturulmaz.
+    private int age;
+
+    //@Lob // büyük boyutlu datalar için sütun oluşmasını sağlar.
+    //private byte[] image;
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
 
     public int getId() {
         return id;
