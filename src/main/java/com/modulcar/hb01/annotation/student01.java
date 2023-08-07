@@ -10,6 +10,7 @@ import javax.persistence.Table;
 public class student01 {
 
     @Id
+    @Column(name = "std_id")
     private int id;
 
     @Column(name = "std_name",length = 100,nullable = false,unique = true)
