@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="t_student01")
-public class student01 {
+public class Student01 {
 
     @Id
     @Column(name = "std_id")
@@ -54,7 +54,7 @@ public class student01 {
 
     @Override
     public String toString() {
-        return "student01{" +
+        return "Student01{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", grade=" + grade +
